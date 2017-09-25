@@ -11,15 +11,14 @@ const football = fs.readFileSync('football.dat')
 const footballPattern = /^\d+.,\w+,\d+,\d+,\d+,\d+,\d+,\d+,\d+/;
 
 function munge(rawData, pattern) {
-  let raw = rawData.replace(/-+/g, '')
+  const raw = rawData.replace(/-+/g, '')
     .replace(/\*+/g, '')
     .replace(/ +\n/g, '\n')
     .replace(/ +/g, ',')
     .split('\n')
-    .map(x => x.slice(1));
-  raw = raw.filter(x => x.match(pattern));
-  console.log(raw);
-  raw = raw.map(lineArray => lineArray.split(','));
+    .map(x => x.slice(1))
+    .filter(x => x.match(pattern))
+    .map(lineArray => lineArray.split(','));
   return raw;
 }
 
@@ -41,7 +40,7 @@ module.exports = function dataMunging(input) {
   const cmp2 = input === 'weather' ? 3 : 7;
   const toReturn = input === 'weather' ? 0 : 1;
   console.log('Data: \n', data);
-  console.log(minDiff(munge(data, pattern), cmp1, cmp2, toReturn));
+  return minDiff(munge(data, pattern), cmp1, cmp2, toReturn);
 };
 
 // process.argv[2] = 'weather';
