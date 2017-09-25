@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- '7'
+deploy:
+  provider: npm
+  email: "joseph.a.griff@gmail.com"
+  api_key:
+    secure: Uv6KGKbXg6LSdPwetj6u+Dq3Gr2zUp8LVkpsKYkBQ3OqYlk7Ec5hYybTc75kgEbKAold6jzolwCQY65Bry1VcJ9ofOzI/Oz6JitiKTL7nnK0yQECypdJWiqUZo88mV47VgmeYY3/PdUqgkYpOVxUiMbcAtVbqmXyrUsrC4osWoC+eiCxQ71tEm9+XMInuIUuE83XCrHThGpGQndmhf9D0Qei3Xllw+SRrApVu1j4dLp77ARzqrDK4Keef5YXlCC5NGDtwwqaOz0DZ1AIY+PY+WKQu8ZoxK2o5+vRLxCxGsX4RWcEWWQYs7jf5iRqg/C7NTG3VAlXUDgryvzfdAyS7U4+UU8mw7kJ5bGm6k6lOmHvV5+nSl5GQA0uRmsqh4+5RocOPJNIywyL1iOwXMfOHYKqQSOkMYYtW0HV4Umtcq81iHeGipWXT+Glop+4nbwmYvHakaJSAGIl+MyE5oS+sqOKDDZupbdOjUPkr3Yzk+JvetTfQ5aOe4TAUjak7vrCOp7XjU7NQVMUVgPd9jcrfIhNEucrnFoVyRuuhOinwRyD8vYhGF08+DQdQ+DyRr9s+x1gcvrA7X2o44MWCufLo/rlVepjwYeDWvmzYUn/5xgToomojRNr6lB7lcFHnVVuFkQBTKPz66Ay9uzyNQX7/RcfJ2aA5Ta3rfT8zpS5nHk=
+  on:
+    tags: true
