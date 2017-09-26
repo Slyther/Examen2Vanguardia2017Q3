@@ -1,11 +1,12 @@
 const fs = require('fs');
+const path = require('path');
 
-const weather = fs.readFileSync('weather.dat')
+const weather = fs.readFileSync(path.join(__dirname, './weather.dat'), 'utf8')
   .toString();
 
 const weatherPattern = /^\d+,\d+,\d+/;
 
-const football = fs.readFileSync('football.dat')
+const football = fs.readFileSync(path.join(__dirname, './football.dat'), 'utf8')
   .toString();
 
 const footballPattern = /^\d+.,\w+,\d+,\d+,\d+,\d+,\d+,\d+,\d+/;
