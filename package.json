@@ -10,6 +10,9 @@
     "test": "nyc npm run lint-test && nyc jasmine",
     "start": "node index.js"
   },
+  "bin": {
+    "examen_vanguardia": "./bin/examen_vanguardia.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Slyther/Examen2Vanguardia2017Q3.git"

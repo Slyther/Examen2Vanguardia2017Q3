@@ -33,7 +33,6 @@ function minDiff(data, cmp1, cmp2, toReturn) {
 }
 
 module.exports = function dataMunging(input) {
-  // return munge(data);
   const data = input === 'weather' ? weather : football;
   const pattern = input === 'weather' ? weatherPattern : footballPattern;
   const cmp1 = input === 'weather' ? 2 : 6;
@@ -42,9 +41,3 @@ module.exports = function dataMunging(input) {
   console.log('Data: \n', data);
   return minDiff(munge(data, pattern), cmp1, cmp2, toReturn);
 };
-
-// process.argv[2] = 'weather';
-// const data = process.argv[2] === 'weather' ? weather : football;
-// const pattern = process.argv[2] === 'weather' ? weatherPattern : footballPattern;
-// console.log('Data: \n', data);
-// console.log(minDiff(munge(data, pattern), 6, 7, 1));
